@@ -1,0 +1,31 @@
+---
+layout: robo_content_layout
+---
+
+<div class="post_space shallow_shadow">
+
+  <div class="post_title bold_text color_34_black">
+    {{page.title}}
+  </div>
+  
+  <div class="post_info">
+
+    <img src="/assets/avatar/{{page.author}}.png" width="60px" height="60px" style="border-radius: 99px;" alt="author_avatar"/>
+
+    <a href="/authors/{{page.author}}.html" class="normal_a color_4_black">
+      <h2 class="smaller_p_margin color_4_black" style="margin-left: 10px;">{{page.author}}</h2>
+    </a>
+
+    <div class="post_date color_4_black bold_text">
+      {{page.date | date: "%Y-%m-%d"}}
+    </div>
+  </div>
+
+  <div class="post_content">
+    {{content}}  
+    </div>
+
+</div>
+
+{% include back_to_top.html %}
+{% include footer.html %}

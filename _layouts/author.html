@@ -1,0 +1,149 @@
+---
+layout: robo_content_layout
+---
+<div class="author_info_space bold_text shallow_shadow">
+
+  <div class="author_avatar_space">
+    <img src="/assets/avatar/{{page.short_name}}.png" alt="No Avatar" class="author_avatar shallow_shadow" />
+  </div>
+
+  <div class="author_info_container">
+    <h1 class="color_4_black smaller_p_margin">{{page.name}}({{page.chinese_name}})</h1>
+    <h3 class="color_85_gray smaller_p_margin">{{page.motto}}</h3>
+    <div class="skilled_space color_85_gray">
+
+      <h3 class="color_4_black smaller_p_margin"> 擅长领域 </h3>
+      {{page.skilled}}
+    </div>
+  </div>
+
+  {% if page.github != "none" %}
+
+  <div class="author_github_space shallow_shadow background_color_4_black color_pure_white">
+    <a class="normal_a color_pure_white" href='{{page.github}}'>转到该作者的GitHub?</a>
+  </div>
+
+  {% else %}
+
+  <div class="author_github_space shallow_shadow background_color_4_black color_pure_white">
+    该作者暂无GitHub
+  </div>
+
+  {% endif %}
+
+  <div class="enrolled_space color_4_black">
+    {{page.enrolled}}入站
+  </div>
+
+</div>
+
+<div class="contact_space">
+
+
+  <div class="contact_item_space">
+    <div class="contact_btn shallow_shadow normal_write_to_shallow">
+
+      <img src="/assets/images/author_avgs/gmail.svg" style="width: 40px; height: 40px;" class="contact_icon" />
+
+      {% if page.gmail != "none" %}
+
+      <h4>
+        <a class="normal_a color_4_black" href="mailto:{{page.gmail}}">{{page.gmail}}</a>
+      </h4>
+
+      {% else %}
+
+
+      <h4 class="bold_text color_4_black">该作者暂无Gmail</h4>
+
+      {% endif %}
+
+    </div>
+  </div>
+  <div class="fence">
+    <img src="/assets/images/general_svgs/fence.svg" style="width: 10px; height: 30px;" alt="fence" />
+  </div>
+  <div class="contact_item_space">
+    <div class="contact_btn shallow_shadow normal_write_to_shallow">
+
+      <img src="/assets/images/author_avgs/x.svg" style="width: 25px; height: 25px;" class="contact_icon" />
+
+      {% if page.x != "none" %}
+
+      <h4>
+        <a class="normal_a color_4_black" href="{{page.x}}">{{page.name}}</a>
+      </h4>
+
+      {% else %}
+
+
+      <h4 class="bold_text color_4_black">该作者暂无X(Twiiter)</h4>
+
+      {% endif %}
+
+    </div>
+  </div>
+
+  <div class="fence">
+    <img src="/assets/images/general_svgs/fence.svg" style="width: 10px; height: 30px;" alt="fence" />
+  </div>
+
+  <div class="contact_item_space">
+    <div class="contact_btn shallow_shadow normal_write_to_shallow">
+
+      <img src="/assets/images/author_avgs/outlook.svg" style="width: 25px; height: 25px;" class="contact_icon" />
+
+      {% if page.outlook != "none" %}
+
+      <h4>
+        <a class="normal_a color_4_black" href="malito:{{page.outlook}}">{{page.outlook}}</a>
+      </h4>
+
+      {% else %}
+
+
+      <h4 class="bold_text color_4_black">该作者暂无X(Twiiter)</h4>
+
+      {% endif %}
+
+    </div>
+  </div>
+
+</div>
+
+<div id="blog_container" class="blog_container" style="width: 60%;">
+
+  {% for post in site.posts | reverse %}
+
+  {% if post.author == page.short_name %}
+
+  <div class="blog_item">
+    <a href="{{post.url}}" class="blog_item_title bold_text color_4_black normal_a">{{post.title}}</a>
+    <a href="{{post.url}}" class="blog_item_content bold_text color_85_gray normal_a">{{post.description}}</a>
+    <div class="blog_item_footer">
+
+
+      {% for author in site.authors %}
+
+      {% if (post.author contains author.short_name) or (post.author == author.short_name) %}
+
+      <a href="{{author.url}}" class="bold_item_author bold_text color_4_black normal_a">{{post.author}}</a>
+
+      {% endif %}
+
+      {% endfor %}
+
+      <div class="blog_item_time bold_text color_4_black">{{post.date}}</div>
+
+
+    </div>
+  </div>
+
+  {% endif %}
+
+  {% endfor %}
+
+</div>
+
+{% include back_to_top.html %}
+{% include footer.html %}

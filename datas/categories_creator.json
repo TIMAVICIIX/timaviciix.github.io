@@ -1,0 +1,21 @@
+---
+---
+
+{
+  "categories": [
+    {% for category in site.categories %}
+    {
+      {% assign category_count = 0 %}
+      "name": "{{ category | first }}",
+      "url": "{{ site.baseurl }}/categories#{{ category | first | slugify | url_encode }}",
+      "datas": [
+        {% for post in category.last %}
+        {% assign category_count = category_count | plus: 1 %}
+        "{{ post.title }}"{% if forloop.last == false %},{% endif %}
+        {% endfor %}
+      ],
+      "times": {{category_count}}
+    }{% if forloop.last == false %},{% endif %}
+    {% endfor %}
+  ]
+}

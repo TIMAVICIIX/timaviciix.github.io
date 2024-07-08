@@ -1,0 +1,18 @@
+---
+---
+
+{
+  "posts": [
+    {% for post in site.posts %}
+    {
+      "title": "{{post.title}}",
+      "url": "{{post.url}}",
+      "author": "{{post.author}}",
+      "date": "{{post.date}}",
+      "description": "{{post.description}}",
+      "tags": "{{post.tags}}",
+      "categories": "{{post.categories}}"
+    }{% if forloop.last == false %},{% endif %}
+    {% endfor %}
+  ]
+}

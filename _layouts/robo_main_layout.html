@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+
+<head>
+    <title>{{page.title}}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/assets/jquery/jquery-3.7.1.js"></script>
+    <link rel="icon" href="/assets/images/general_svgs/icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body class="back_ground_color">
+
+    {% include back_to_top.html %}
+    
+    <div class="main_top_container">
+        <div class="main_background_container"></div>
+        <div class="main_last_time_update_container color_pure_white bold_text">
+            {% for time in site.data.update_time_data %}
+            {% if time.time_type == "site" %}
+            上次维护结束时间:&nbsp;{{ time.update_time }}
+            {% endif %}
+            {% endfor %}
+        </div>
+        <div class="header_robo_and_title">
+
+            <div class="robo_space">
+                <div class="robo_face"></div>
+                <img src="/assets/images/main_svgs/robo/star.svg" id="star_num1" /><br>
+                <img src="/assets/images/main_svgs/robo/star.svg" id="star_num2" />
+            </div>
+            <div class="title_space">
+                <div id="title_num1" class="color_rice_white bold_text">{{page.main_title_1}}</div>
+                <div id="title_num2" class="color_pure_white bold_text">{{page.main_title_2}}</div>
+                <div id="title_num3" class="color_pure_white bold_text">{{page.main_title_3}}</div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="total_space_container" class="middle_ground_color front_card background_deep_shadow">
+
+
+        <div id="main_space">
+
+            <div class="hinter color_deep_red bold_text" id="hinter">
+            </div>
+            <div id="hinter_text_container" style="display: none;">
+                {% for sentence in site.data.robo_hint %}
+                {{sentence}}
+                {% endfor %}
+            </div>
+
+            <div class="github_repository_link_title">
+
+                <div class="github_title bold_text color_4_black">
+                    Robo推荐的Git远程仓库
+                </div>
+                <img class="github_opening" src="/assets/images/main_svgs/github-openning.svg" alt="github-opening" />
+
+                <div class="github_origin_repository_btn normal_write_to_shallow shallow_shadow">
+
+                    <div class="github_origin_btn_text color_4_black bold_text" onclick="window.open('https://github.com/TIMAVICIIX/timaviciix.github.io')">
+                        转到该网站的GitHub远程仓库
+                    </div>
+                    <img id="github_share" src="/assets/images/main_svgs/share.svg" alt="share"
+                        style="width: 30px;height: 30px;" />
+
+                </div>
+
+            </div>
+
+            <div class="github_repository_link_container">
+
+                {% for git in site.data.git_repository_data %}
+
+                <div class="github_repository_item normal_write_to_shallow bold_text shallow_shadow"
+                    onclick="window.open('{{git.repository_link}}')">
+
+                    <div class="git_item_title bold_text color_4_black">
+                        {{git.repository_name}}
+                    </div>
+
+                    <div class="git_item_des bold_text color_normal_gray">
+                        {{git.repository_des}}
+                    </div>
+
+                    <div class="git_item_author bold_text color_4_black">
+                        by.{{git.repository_creator}}
+                    </div>
+
+
+                    {% if git.repository_state == "public" %}
+
+                    <div class="git_item_click bold_text blod_text color_4_black">
+                        点击访问
+                    </div>
+
+                    <div class="git_item_state bold_text blod_text color_4_black">
+                        {{git.repository_state}}
+                    </div>
+
+                    <div class="git_open_img background_color_shallow_green"></div>
+
+                    {% endif %}
+
+                    {% if git.repository_state == "private" %}
+
+                    <div class="git_item_click bold_text blod_text color_4_black">
+                        请与作者联系
+                    </div>
+
+                    <div class="git_item_state bold_text blod_text color_4_black">
+                        {{git.repository_state}}
+                    </div>
+
+                    <div class="git_open_img background_color_deep_red"></div>
+
+                    {% endif %}
+
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+            <div class="last_time_update_git color_4_black bold_text">
+                {% for time in site.data.update_time_data %}
+                {% if time.time_type == "git" %}
+                --上次更新日期:{{ time.update_time }}--
+                {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="tag_sea_area">
+                <div class="tag_sea_title bold_text shallow_text normal_background_black">
+                    #"签"海无涯#
+                </div>
+                <div id="tag_sea_container">
+
+                </div>
+            </div>
+
+            <div class="blog_title_space">
+
+                <div class="blog_ch_title bold_text color_4_black">
+                    博客
+                </div>
+
+                <div class="blog_nav">
+
+                    <div id="blog_nav_comme" class="blog_nav_item bold_text color_4_black">
+                        推荐<img class="nav_svg" src="/assets/images/main_svgs/commen.svg" alt="comme" />
+                    </div>
+
+                    <div id="blog_nav_classify" class="blog_nav_item bold_text color_4_black">
+                        分类<img class="nav_svg" src="/assets/images/main_svgs/all.svg" alt="classify" />
+                    </div>
+
+                    <div id="blog_nav_author" class="blog_nav_item bold_text color_4_black">
+                        作者<img class="nav_svg" src="/assets/images/main_svgs/author.svg" alt="author" />
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="blog_container" class="blog_container">
+
+                {% for post in site.posts | reverse limit: 5 %}
+
+                <div class="blog_item">
+                    <a href="{{post.url}}" class="blog_item_title bold_text color_4_black normal_a">{{post.title}}</a>
+                    <a href="{{post.url}}"
+                        class="blog_item_content bold_text color_85_gray normal_a">{{post.description}}</a>
+                    <div class="blog_item_footer">
+
+
+                        {% for author in site.authors %}
+
+                            {% if (post.author contains author.short_name) or (post.author == author.short_name) %}
+
+                            <a href="{{author.url}}"
+                                class="bold_item_author bold_text color_4_black normal_a">{{post.author}}</a>
+
+                            {% endif %}
+
+                        {% endfor %}
+
+                        <div class="blog_item_time bold_text color_4_black">{{post.date}}</div>
+
+
+                    </div>
+                </div>
+
+                {% endfor %}
+
+                <a href="/blog.html" class="bold_text color_4_black normal_a">获取更多文章?</a>
+
+            </div>
+
+            <div id="categories_container" class="classify_container">
+
+
+
+            </div>
+
+
+            <div id="author_container" class="blog_container">
+
+                {% for author in site.authors limit: 5 %}
+
+                <div class="blog_item">
+                    <a href="{{author.url}}" class="blog_item_title bold_text color_4_black normal_a">{{author.name}}({{author.chinese_name}})</a>
+                    <div class="blog_item_content bold_text color_85_gray normal_a">{{author.position}}</div>
+                    <div class="blog_item_content bold_text color_85_gray normal_a">擅长领域:{{author.skilled}}</div>
+                    <div class="blog_item_footer">
+                        <div class="blog_item_time bold_text color_4_black">{{author.enrolled}}入站</div>
+                    </div>
+
+                </div>
+
+                {% endfor %}
+
+                <a href="/staff.html" class="bold_text color_4_black normal_a">查看更多作者?</a>
+
+            </div>
+
+            {% include footer.html %}
+
+
+        </div>
+
+        <div id="side_space">
+
+            <div class="side_bar_title_style bulletin_board_title_color shallow_shadow bold_text">
+                公&nbsp;告&nbsp;栏
+            </div>
+
+            <div id="bulletin_board_text_container" style="display: none;">
+                {% for item in site.data.bulletin_board_content %}
+                {{item.bulletin_title}}**Spliter**{{item.content}}**Spliter**{{item.link}}
+                {% endfor %}
+            </div>
+
+            <div class="bulletin_board_area_style color_pure_white">
+
+
+                <img class="little_robo" src="/assets/images/main_svgs/bulletin-board/Idle.svg" alt="little_robo" />
+                <div class="bulletin_board">
+
+                    <div class="bulletin_inside_title">成为注册作者?</div>
+                    <div class="bulletin_inside_content">听说与Robo联系可以成为该网站的注册作者...</div>
+
+                </div>
+
+            </div>
+
+            <div class="side_space_nav_space">
+                {% for navBtn in site.data.navigation_button_content %}
+
+                {% if navBtn.type == "main" %}
+                <div class="side_space_nav_button bold_text shallow_shadow other_black_button"
+                    onclick="window.location.href='{{navBtn.href}}'">
+                    {{navBtn.navigation}}
+                </div>
+                {% endif %}
+
+                {% if navBtn.type == "normal" %}
+                <div class="side_space_nav_button bold_text shallow_shadow other_white_button"
+                    onclick="window.open('{{navBtn.href}}')">
+                    {{navBtn.navigation}}
+                </div>
+                {% endif %}
+
+                {% endfor %}
+
+
+            </div>
+
+            <div class="side_bar_title_style title_board_color shallow_shadow bold_text">
+                新晋"标题党"
+            </div>
+            <div class="side_space_nav_space">
+
+                {% for post in site.posts | reverse limit: 9 %}
+
+                <div class="side_space_party_button bold_text shallow_shadow title_board_card_color"
+                    onclick="window.location.href='{{post.url}}'">
+
+                    <div class="side_space_party_button_title">
+                        {{post.title}}
+                    </div>
+                    <div class="side_space_party_button_author">
+                        by:{{post.author}}
+                    </div>
+
+                </div>
+
+                {% endfor %}
+
+                {% assign show_count = site.posts | size %}
+                {% for i in (show_count..8) %}
+                <div class="side_space_party_button bold_text shallow_shadow title_board_card_color"
+                    onclick="window.location.href='{{post.url}}'">
+
+                    <div class="side_space_party_button_title">
+                        暂无其他文章
+                    </div>
+
+                </div>
+                {% endfor %}
+
+            </div>
+
+            <div class="side_space_nav_space">
+
+
+                <div class="special_thanks_text power_design_color bold_text">
+                    Designed.By.Pixso
+                </div>
+                <div class="special_thanks_text power_content_color bold_text">
+                    Powered.By.Jekyll
+                </div>
+
+                <div class="footer_btn_container">
+
+                    <div class="special_thanks_button normal_btn_color bold_text shallow_shadow">
+                        获取该站点原创主题Jekyll项目?
+                    </div>
+                    <div class="special_thanks_button normal_btn_color bold_text shallow_shadow">
+                        获取该站点的Pixso原创主题设计文件?
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    {% include tags_fetcher.html %}
+    {% include categories_fetcher.html %}
+    <script src="../assets/js/blogs_changer.js"></script>
+    <script src="../assets/js/hint_replacer.js"></script>
+    <script src="../assets/js/bulletin_replacer_and_robo_animator.js"></script>
+    <script src="../assets/js/background_move.js"></script>
+</body>
+
+</html>

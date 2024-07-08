@@ -1,0 +1,142 @@
+//标签颜色们以及Hover
+.label_color_bule {
+    background-color: #95E1D3;
+}
+
+.label_color_green {
+    background-color: #EAFFD0;
+}
+
+.label_color_yellow {
+    background-color: #FCE38A;
+}
+
+.label_color_red {
+    background-color: #F38181;
+}
+
+//颜色们
+.color_pure_white {
+    color: #FFFFFF;
+}
+
+.color_pure_black {
+    color: #000000;
+}
+
+.color_golden {
+    color: #ADA996;
+}
+
+.color_rice_white {
+    color: #FBFBFB;
+}
+
+.color_deep_red {
+    color: #261D1D;
+}
+
+.color_deep_blue {
+    color: #112D4E;
+}
+
+.color_4_black {
+    color: #444444;
+}
+
+.color_85_gray {
+    color: #858585;
+}
+
+.color_normal_gray {
+    color: #6D838C;
+}
+
+.color_deep_red {
+    color: #5a1010;
+}
+
+.color_34_black {
+    color: #343434;
+}
+
+.background_color_deep_red {
+    background-color: #5a1010;
+}
+
+.background_color_shallow_green {
+    background-color: #11D3BC;
+}
+
+.background_color_4_black {
+    background-color: #444444;
+}
+
+// 背景板,中景板和中景Icon的颜色
+.back_ground_color {
+    background-color: #454545;
+}
+
+.back_ground_icon_color {
+    background-color: #7A7979;
+}
+
+.middle_ground_color {
+    background-color: #FBFBFB;
+}
+
+//Powerd By Jekyll的黑金渐变色
+@keyframes gradient-powerd-scroll {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+.power_content_color {
+    background-size: 200% 200%;
+    background-image: linear-gradient(to right, #ADA996 0%, #958E6C 25%, #8A8989 75%, #4A4602 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradient-powerd-scroll 10s ease-in-out infinite;
+}
+
+//Designed By Pixso的粉蓝渐变色
+.power_design_color {
+    background-size: 200% 200%;
+    background-image: linear-gradient(to right, #5266bd 0%, #cf6bcf 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradient-powerd-scroll 10s ease-in-out infinite;
+}
+
+//通用按钮颜色
+.normal_btn_color {
+    color: #112D4E;
+    background-color: #FFFFFF;
+}
+
+.normal_btn_color:hover {
+    background-color: #112D4E;
+    color: #FFFFFF;
+}
+
+.normal_write_to_shallow {
+    background-color: #FFFFFF;
+}
+
+.normal_write_to_shallow:hover {
+    background-color: #e2e1e1;
+}
+
+.normal_background_black {
+    background-color: #444444;
+    color: #F7F6E7;
+}

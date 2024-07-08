@@ -1,0 +1,28 @@
+---
+layout: robo_search_layout
+title: {{page.title}}
+top_title: {{page.top_title}}
+---
+<h1 class="bold_text color_4_black" style="text-align: center;">全部作者</h1>
+<div id="search_post_container" class="search_post_container">
+    
+</div>
+
+<div id="author_container" class="blog_container" style="width: 60%;">
+
+    {% for author in site.authors limit: 5 %}
+
+    <div class="blog_item">
+        <a href="{{author.url}}" class="blog_item_title bold_text color_4_black normal_a">{{author.name}}({{author.chinese_name}})</a>
+        <div class="blog_item_content bold_text color_85_gray normal_a">{{author.position}}</div>
+        <div class="blog_item_content bold_text color_85_gray normal_a">擅长领域:{{author.skilled}}</div>
+        <div class="blog_item_footer">
+            <div class="blog_item_time bold_text color_4_black">{{author.enrolled}}入站</div>
+        </div>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+{% include footer.html %}

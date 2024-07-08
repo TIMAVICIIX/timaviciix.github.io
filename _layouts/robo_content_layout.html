@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+
+<head>
+    <title>{{page.title}}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/assets/jquery/jquery-3.7.1.js"></script>
+    <link rel="icon" href="/assets/images/general_svgs/icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prismjs/1.24.0/prism.min.css">
+</head>
+
+<body class="back_ground_color">
+    <div class="content_top_container">
+        <div class="main_background_container"></div>
+        <div class="content_top_title color_pure_white bold_text">{{page.top_title}}</div>
+
+        {% if page.name contains ".md" %}
+
+        <div class="content_side_title color_pure_white bold_text">{{page.title}}</div>
+
+        {% else %}
+
+        <div class="content_side_title color_pure_white bold_text">{{page.name}}</div>
+
+        {% endif %}
+    </div>
+
+    <div id="content_space_container" class="middle_ground_color front_card background_deep_shadow">
+
+        <h3>
+            <a href="/" class="bold_text color_4_black normal_a">回到主页</a>
+            <a href="/staff.html" class="bold_text color_4_black normal_a">全部作者</a>
+            <a href="/blog.html" class="bold_text color_4_black normal_a">全部文章</a>
+        </h3>
+
+        {{content}}
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prismjs/1.24.0/prism.min.js"></script>
+</body>
+
+</html>

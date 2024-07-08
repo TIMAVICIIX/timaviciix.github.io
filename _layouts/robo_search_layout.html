@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+
+<head>
+    <title>{{page.title}}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/assets/jquery/jquery-3.7.1.js"></script>
+    <link rel="icon" href="/assets/images/general_svgs/icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body class="back_ground_color">
+
+    <div class="search_top_container">
+        <div class="main_background_container"></div>
+        <div class="search_top_title color_pure_white bold_text">{{page.top_title}}</div>
+        <img class="robo_head" src="/assets/images/search_svgs/robo_head.svg" />
+    </div>
+
+    <div id="search_space_container" class="middle_ground_color front_card background_deep_shadow">
+
+        <h3>
+            <a href="/" class="bold_text color_4_black normal_a">回到主页</a>
+        </h3>
+
+        {{content}}
+
+    </div>
+
+</body>
+
+</html>

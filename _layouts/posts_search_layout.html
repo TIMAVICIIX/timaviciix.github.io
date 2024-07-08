@@ -1,0 +1,49 @@
+---
+layout: robo_search_layout
+title: {{page.title}}
+top_title: {{page.top_title}}
+---
+
+<div class="search_input_container">
+    <input type="text" id="search_input" class="search_input shallow_shadow bold_text color_4_black" placeholder="合适的,才是最好的" />
+    <button id="search_btn" class="bold_text color_4_black normal_write_to_shallow shallow_shadow">搜索</button>
+</div>
+
+<div id="search_post_container" class="search_post_container">
+
+    {% for post in site.posts | reverse %}
+
+    <div class="blog_item">
+        <a href="{{post.url}}" class="blog_item_title bold_text color_4_black normal_a">{{post.title}}</a>
+        <a href="{{post.url}}"
+            class="blog_item_content bold_text color_85_gray normal_a">{{post.description}}</a>
+        <div class="blog_item_footer">
+
+
+            {% for author in site.authors %}
+
+                {% if (post.author contains author.short_name) or (post.author == author.short_name) %}
+
+                <a href="{{author.url}}"
+                    class="bold_item_author bold_text color_4_black normal_a">{{post.author}}</a>
+
+                {% endif %}
+
+            {% endfor %}
+
+            <div class="blog_item_time bold_text color_4_black">{{post.date}}</div>
+
+
+        </div>
+    </div>
+
+    {% endfor %}
+
+</div>
+
+
+{{content}}
+
+{% include posts_fetcher.html %}
+{% include back_to_top.html %}
+{% include footer.html %}

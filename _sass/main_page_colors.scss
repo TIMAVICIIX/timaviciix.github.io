@@ -1,0 +1,80 @@
+//GitHub分享渐变色
+.github_share_color {
+    background-image: linear-gradient(to bottom, #FFFA00, #32EED5);
+}
+
+//公告栏渐变颜色+颜色动画
+@keyframes gradient-bulletin-scroll {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+.bulletin_board_title_color {
+    background-size: 200% 100%;
+    background-image: repeating-linear-gradient(to right, #ADA996 0%, #D0CEC4 14%, #DBDBDB 29%, #EAEAEA 44%, #DBDBDB 59%, #D0CEC4 78%, #ADA996 100%);
+    color: #444444;
+    animation: gradient-bulletin-scroll 6s ease-in-out infinite;
+}
+
+//"标题党"专栏渐变颜色+动画
+@keyframes gradient-title-scroll {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+.title_board_color {
+    background-size: 200% 100%;
+    background-image: linear-gradient(to right, #D9A7C7 0%, #FBD786 50%, #F7797D 100%);
+    color: #444444;
+    animation: gradient-title-scroll 5s ease-in-out infinite;
+}
+
+
+
+//标题党卡片
+.title_board_card_color {
+    background-color: #FFFFFF;
+    color: #444444;
+}
+
+.title_board_card_color:hover {
+    background-color: #444444;
+    color: #FFFFFF;
+}
+
+//公告栏下面几个功能按钮的背景颜色
+.other_black_button {
+    background-color: #444444;
+    color: #F7F6E7;
+}
+
+.other_black_button:hover {
+    color: #222222;
+}
+
+.other_white_button {
+    background-color: #FFFFFF;
+    color: #112D4E;
+}
+
+.other_white_button:hover {
+    background-color: #444444;
+    color: #F7F6E7;
+}

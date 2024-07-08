@@ -1,0 +1,741 @@
+//主页Styles
+.main_top_container {
+    width: 100%;
+    height: 350px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+#total_space_container {
+    flex-grow: 1;
+    overflow-y: hidden;
+
+    display: flex;
+    z-index: 90;
+}
+
+
+.main_background_container {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+
+    background-image: url("../images/middle_icon_png/icons.png");
+    background-size: contain;
+    background-position: center;
+}
+
+.main_last_time_update_container {
+    width: auto;
+    height: auto;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+
+    align-items: end;
+
+    font-size: 20px;
+}
+
+.front_card {
+    border-radius: 15px 15px 0 0;
+}
+
+.header_robo_and_title {
+    position: absolute;
+    width: 100%;
+    height: 90%;
+
+    bottom: 0;
+}
+
+//打招呼Robo的Style
+.robo_space {
+    position: absolute;
+    width: 40%;
+    height: 100%;
+
+    padding: 10px;
+}
+
+.robo_face {
+    width: 70%;
+    height: 95%;
+
+    background: url("../images/main_svgs/robo/RoboEntity.svg") no-repeat;
+    background-size: 100% 100%;
+
+    position: absolute;
+    bottom: -40px;
+    left: 10px;
+}
+
+#star_num1 {
+
+
+    margin-top: 20px;
+    margin-left: 500px;
+
+
+    transform: rotate(-90deg);
+}
+
+#star_num2 {
+
+    margin-top: 5px;
+    margin-left: 500px;
+
+    width: 15%;
+    height: 15%;
+
+}
+
+
+
+.title_space {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+
+    margin-left: 40%;
+
+    padding: 10px;
+}
+
+#title_num1 {
+    font-size: 40px;
+}
+
+#title_num2 {
+    margin-left: 80px;
+    font-size: 70px;
+}
+
+#title_num3 {
+    font-size: 140px;
+}
+
+//为内容卡片分区并设置布局样式
+#side_space {
+    flex: 3;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 20px;
+}
+
+#main_space {
+    flex: 7;
+
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+//侧边栏样式-标题样式
+.side_bar_title_style {
+    margin-top: 10px;
+    margin-bottom: 5px;
+
+    font-size: 40px;
+
+    width: 260px;
+    height: 80px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 15px;
+
+}
+
+.bulletin_board_area_style {
+
+    margin-top: 5px;
+
+    width: 80%;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+
+}
+
+.little_robo {
+    position: absolute;
+    z-index: 99;
+
+    bottom: 0;
+    left: 0;
+
+    width: 93px;
+    height: 153px;
+}
+
+.bulletin_board {
+    width: 85%;
+    height: 80%;
+
+    background-image: url("../images/main_svgs/bulletin-board/bulletin-board.svg");
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bulletin_inside_title {
+
+    width: 80%;
+    height: auto;
+
+    font-family: "Auto_Pen", sans-serif;
+
+    font-size: 30px;
+
+    text-align: center;
+
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    margin-top: 40px;
+    margin-bottom: 10px;
+
+}
+
+.bulletin_inside_content {
+
+    width: 80%;
+    height: auto;
+
+    font-family: "Auto_Pen", sans-serif;
+
+    font-size: 25px;
+
+    text-align: center;
+
+    margin-top: 10px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.side_space_nav_space {
+    width: 85%;
+    height: auto;
+
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.side_space_nav_button {
+    width: 80%;
+    height: 55px;
+
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.side_space_party_button {
+    position: relative;
+
+    width: 95%;
+    height: 80px;
+
+    border-radius: 10px;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.side_space_party_button_title {
+    position: absolute;
+
+    font-size: 20px;
+
+    top: 10px;
+    left: 10px;
+}
+
+.side_space_party_button_author {
+    position: absolute;
+
+    font-size: 15px;
+
+    bottom: 10px;
+    right: 10px;
+}
+
+.special_thanks_text {
+    width: 100%;
+    text-align: right;
+}
+
+.footer_btn_container {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.special_thanks_button {
+
+    width: auto;
+    height: auto;
+
+    margin-top: 10px;
+
+    padding: 5px;
+
+    text-align: end;
+
+}
+
+//主页内容布局样式
+.github_repository_link_title {
+
+    width: 100%;
+    height: 80px;
+
+    margin-top: 40px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    position: relative;
+}
+
+.github_title {
+
+    width: auto;
+    height: 100%;
+
+    padding: 10px;
+
+    font-size: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.github_opening {
+    width: 40px;
+    height: 40px;
+}
+
+.github_origin_repository_btn {
+    width: 30%;
+    height: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    position: absolute;
+    right: 10px;
+
+    border-radius: 5px;
+
+}
+
+.github_origin_btn_text {
+    font-size: 18px;
+}
+
+#github_share {
+    position: absolute;
+    right: 5px;
+}
+
+.github_repository_link_container {
+
+    width: 100%;
+    height: auto;
+
+    padding: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+
+    min-height: 0;
+
+}
+
+.github_repository_item {
+
+    width: 29%;
+    height: 200px;
+
+    border-radius: 10px;
+
+    margin: 20px;
+
+    position: relative;
+
+}
+
+.git_item_title {
+
+    width: 99%;
+
+    position: absolute;
+
+    font-size: 25px;
+
+    top: 3px;
+    left: 5px;
+}
+
+.git_item_des {
+
+    width: 60%;
+    height: auto;
+
+    position: absolute;
+
+    font-size: 15px;
+
+    top: 40px;
+    left: 5px;
+}
+
+.git_item_author {
+    position: absolute;
+
+    font-size: 15px;
+
+    bottom: 23px;
+    left: 5px;
+}
+
+.git_item_click {
+    position: absolute;
+
+    bottom: 3px;
+    left: 5px;
+}
+
+.git_item_state {
+    position: absolute;
+
+    font-size: 20px;
+
+    bottom: 5px;
+    right: 25px;
+}
+
+.git_open_img {
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+
+    border-radius: 99px;
+
+    bottom: 5px;
+    right: 2px;
+}
+
+.last_time_update_git {
+    width: 100%;
+    height: auto;
+
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+//"签"海无涯-专栏
+.tag_sea_area {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tag_sea_title {
+    width: 20%;
+    height: 50px;
+
+    padding-left: 8px;
+    padding-right: 8px;
+
+    font-size: 30px;
+
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+#tag_sea_container {
+
+    width: 100%;
+    height: auto;
+
+    padding: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.tag_sea_item {
+
+    width: auto;
+
+    height: 30px;
+
+    padding: 10px;
+
+    margin: 8px;
+
+    border-radius: 5px;
+
+    color: #444444;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+}
+
+.tag_sea_item:hover {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+//博客区域
+.blog_title_space {
+
+    width: 95%;
+    height: 100px;
+
+    padding: 10px 5px;
+
+    margin-top: 70px;
+    margin-left: 7px;
+
+    border-bottom: 1px solid #444444;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+
+    position: relative;
+
+}
+
+.blog_ch_title {
+
+    font-size: 70px;
+
+    height: auto;
+    flex: 15;
+
+}
+
+.blog_nav {
+    font-size: 35px;
+
+    height: auto;
+    flex: 75;
+
+    margin-top: 30px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+.blog_nav_item {
+
+    height: 100%;
+
+    flex: 1;
+
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_svg:hover {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.blog_container {
+
+    width: 100%;
+    height: auto;
+
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.blog_item {
+
+    width: 95%;
+
+    height: auto;
+
+    border-bottom: 1px solid #a0a0a0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.blog_item_title {
+
+    margin: 10px;
+
+    width: 100%;
+
+    font-size: 35px;
+}
+
+.blog_item_content {
+
+    width: 90%;
+
+    height: auto;
+
+    font-size: 20px;
+
+    margin: 10px;
+
+    padding: 5px;
+}
+
+.blog_item_footer {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.blog_item_author {
+    text-align: start;
+    flex: 1;
+}
+
+.blog_item_time {
+    text-align: end;
+    flex: 1;
+}
+
+//分类区域
+.classify_container {
+    width: 100%;
+    height: auto;
+
+    padding: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.classify_item {
+
+    width: 150px;
+    height: 90px;
+
+    font-size: 20px;
+
+    margin: 5px 10px;
+
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+//页脚样式
+.main_page_footer {
+
+    width: 100%;
+    height: 100px;
+
+    margin-top: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main_page_footer_item {
+
+    margin: 5px;
+
+}
+
+.footer_img {
+    width: 15px;
+    height: 15px;
+}

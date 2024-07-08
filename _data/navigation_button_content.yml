@@ -1,0 +1,9 @@
+- navigation: "访问该网站全部文章"
+  type: "main"
+  href: /blog.html
+- navigation: "联系Robo成为该网站注册作者?"
+  type: "normal"
+  href: mailto:timaviciix@outlook.com
+- navigation: "Robo静态对称加解密(HSA-1)[未开放]"
+  type: "normal"
+  herf: "#"

@@ -1,0 +1,12 @@
+- bulletin_title: "成为注册作者?"
+  content: "听说与Robo联系可以成为该网站的注册作者..."
+  link: /
+- bulletin_title: "你知道吗?"
+  content: "该公告栏内容字数不能大于20个字"
+  link: /
+- bulletin_title: "文章管理办法"
+  content: "详情请点击公告板进行查看"
+  link: /
+- bulletin_title: "公告维护文件"
+  content: "该公告栏由项目中_data文件夹中的bulletin_board_content.yml文件维护"
+  link: /
