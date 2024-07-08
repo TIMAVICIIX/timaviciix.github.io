@@ -41,6 +41,8 @@ jobs:
 
       - name: Setuo Env
         run: | 
+          gem install bundler
+          bundle install
           bundle lock --add-platform ruby
           bundle lock --add-platform x86_64-linux
 
@@ -49,12 +51,7 @@ jobs:
         with:
           ruby-version: 3.3.3
           bundler-cache: true
-      
-      - name: Install dependencies
-        run: |
-          gem install bundler
-          bundle install
-
+          
       - name: Build site
         run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
         env:
