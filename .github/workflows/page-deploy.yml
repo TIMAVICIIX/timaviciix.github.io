@@ -39,6 +39,11 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
+      - name: Setuo Env
+        run: | 
+          bundle lock --add-platform ruby
+          bundle lock --add-platform x86_64-linux
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
