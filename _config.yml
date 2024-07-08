@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Robo.Timaviciix's Blog Space
+title: Robo-knowledge-web-theme
 email: timaviciix@outlook.com
 description: >- # this means to ignore newlines until "baseurl:"
     Robo.Timaviciix's Blog Space,Recorded all study notes as well as hands-on procedures.
